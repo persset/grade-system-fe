@@ -1,25 +1,69 @@
+import { styled } from "@stitches/react";
 import { Button } from "../components/Button";
 import { Input } from "../components/Input";
 
 export function Login() {
   async function handleLogin() {}
 
-  return (
-    <div id="page-login">
-      <aside>
-        <strong>Nome da instituição / logo</strong>
-        <p>Slogan or whatever</p>
-      </aside>
-      <main>
-        <div className="main-content">
-          <form onSubmit={handleLogin}>
-            <Input type="email" placeholder="Email" />
-            <Input type="password" placeholder="Senha" />
+  const Box = styled("div", {});
+  const Main = styled("main", {});
+  const Aside = styled("aside", {});
 
-            <Button type="submit">Entrar</Button>
+  return (
+    <Box
+      id="page-login"
+      css={{ display: "flex", alignItems: "stretch", height: "100vh" }}
+    >
+      <Aside
+        css={{
+          flex: 6,
+          background: "#2d6eeb",
+          color: "#fff",
+
+          display: "flex",
+          flexDirection: "column",
+          justifyContent: "center",
+
+          padding: "120px 80px",
+        }}
+      >
+        <strong>aaaaaaaaaaaaaaaaaaaaaaaa</strong>
+        <p>aaaaaaaaaaaaaaaaaaaa</p>
+      </Aside>
+      <Main
+        css={{
+          flex: 8,
+
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "center",
+        }}
+      >
+        <Box
+          className="main-content"
+          css={{
+            display: "flex",
+            flexDirection: "column",
+            width: "100%",
+            maxWidth: "320px",
+            alignItems: "stretch",
+            textAlign: "center",
+          }}
+        >
+          <form onSubmit={handleLogin}>
+            <Input type="email" placeholder="Email" css={{ width: "100%" }} />
+            <Input
+              type="password"
+              placeholder="Senha"
+              css={{ width: "100%" }}
+            />
+
+            <Button type="submit" css={{ width: "100%" }}>
+              Entrar
+            </Button>
           </form>
-        </div>
-      </main>
-    </div>
+        </Box>
+      </Main>
+    </Box>
   );
 }
