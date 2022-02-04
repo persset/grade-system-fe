@@ -1,6 +1,7 @@
 import { styled } from "@stitches/react";
 import { Button } from "../components/Button";
 import { Input } from "../components/Input";
+import { PageBox } from "../components/PageBox";
 
 export function Login() {
   async function handleLogin() {}
@@ -10,10 +11,7 @@ export function Login() {
   const Aside = styled("aside", {});
 
   return (
-    <Box
-      id="page-login"
-      css={{ display: "flex", alignItems: "stretch", height: "100vh" }}
-    >
+    <PageBox id="page-login">
       <Aside
         css={{
           flex: 6,
@@ -64,6 +62,6 @@ export function Login() {
           </form>
         </Box>
       </Main>
-    </Box>
+    </PageBox>
   );
 }
